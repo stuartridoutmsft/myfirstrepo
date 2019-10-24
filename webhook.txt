@@ -1,0 +1,65 @@
+{
+    "@context": "https://schema.org/extensions",
+    "@type": "MessageCard",
+    "themeColor": "0072C6",
+    "title": "Order #48728 not progressed to fulfilment",
+    "text": "Customer order has **NOT** progressed beyond order submission. **THIS REQUIRES ACTION**",
+    "sections": [
+        {
+            "activityTitle": "Customer #91817134 - Katie McQueen",
+            "activitySubtitle": "Order value: £817.23",
+            "activityImage": "https://teamsnodesample.azurewebsites.net/static/img/image5.png",
+            "facts": [
+                {
+                    "name": "Order timestamp",
+                    "value": "23/10/2019 19:34:03 GMT+0100 (British Summer Time)"
+                },
+                {
+                    "name": "Status",
+                    "value": "Payment processed, shopping cart cleared, order in pending queue"
+                },
+                {
+                    "name": "Error reason",
+                    "value": "No fulfilment queue available"
+                },
+                {
+                    "name": "Action by",
+                    "value": "24/10/2019"
+                }
+            ],
+            "markdown": true
+        }
+    ],
+    "potentialAction": [
+        {
+            "@type": "ActionCard",
+            "name": "Select fulfilment queue",
+            "inputs": [
+                {
+                    "@type": "TextInput",
+                    "id": "feedback",
+                    "isMultiline": true,
+                    "title": "Let us know what you think about Actionable Messages"
+                }
+            ],
+            "actions": [
+                {
+                    "@type": "HttpPOST",
+                    "name": "Submit",
+                    "isPrimary": true,
+                    "target": "http://..."
+                }
+            ]
+        },
+        {
+            "@type": "OpenUri",
+            "name": "View order details",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "https://docs.microsoft.com/outlook/actionable-messages"
+                }
+            ]
+        }
+    ]
+}
